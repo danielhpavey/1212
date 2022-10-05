@@ -18,8 +18,13 @@ export default function Layout({ children }) {
 
         return () => router.events.off('routeChangeStart', closeMenu);
     }, [router.events]);
+    useEffect(() =>
+    {        
+        document.body.classList.add("max-w-4xl");
+        document.body.classList.add("mx-auto");
+    });
   return (
-    <div className='flex flex-col min-h-screen font-sans text-gray-700'>
+    <div className='relative flex flex-col min-h-screen font-sans text-slate-500 gap-4'>
       <button
           aria-label="Menu"
           className="absolute z-50 right-0 inline-flex p-3 hover:bg-blue-600 text-white ml-auto hover:text-white outline-none"
@@ -45,9 +50,10 @@ export default function Layout({ children }) {
           }   sticky top-0`}>
 	  <a href="/">Home</a>
       </menu>
-      <header className="h-80 bg-sunflower bg-cover bg-center">
+      <header className="h-80 bg-sunflower bg-cover bg-center ">
       </header>
-      <main className=''>{children}</main>
+      <header className=" px-12  prose prose-xl"><h1>12:12 Counselling</h1></header>
+      <main className=' px-12  prose prose-xl'>{children}</main>
       <footer className=''>
       </footer>
     </div>
