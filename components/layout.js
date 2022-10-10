@@ -27,7 +27,7 @@ export default function Layout({ children }) {
     <div className='relative flex flex-col min-h-screen font-sans text-slate-500 gap-4'>
       <button
           aria-label="Menu"
-          className="absolute z-50 right-0 inline-flex p-3 hover:bg-blue-600 text-white ml-auto hover:text-white outline-none"
+          className="absolute z-50 right-0 inline-flex p-3 hover:bg-black text-white ml-auto hover:text-white outline-none"
           onClick={handleClick}
               >
           <svg
@@ -48,7 +48,9 @@ export default function Layout({ children }) {
       <menu className={`${
             active ? '' : 'hidden'
           }   sticky top-0`}>
-	  <a href="/">Home</a>
+    <div className="w-full text-lg h-screen flex flex-col text-center text-6xl">
+	    <a href="/">Home</a>
+      </div>
       </menu>
       <header className="h-80 bg-sunflower bg-cover bg-center ">
       </header>
