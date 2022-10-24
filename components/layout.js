@@ -46,8 +46,8 @@ export default function Layout({ children }) {
           </svg>
       </button>
       <menu className={`${
-            active ? '' : 'hidden'
-          }   sticky top-0`}>
+            active ? 'top-0 right-0' : '-top-[100vh] -right-[100vw]'
+          }    transition-all duration-500	 w-full absolute bg-white`}>
     <div className="w-full text-lg h-screen flex flex-col text-center text-6xl">
 	    <a href="/">Home</a>
       </div>
